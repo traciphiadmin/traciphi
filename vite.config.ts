@@ -17,7 +17,7 @@ const config = defineConfig({
     }),
     viteReact(),
   ],
-  base: '/traciphi/',
+  base: '/',
   build: {
     outDir: 'dist/client',
   },
