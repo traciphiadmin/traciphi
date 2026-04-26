@@ -26,12 +26,15 @@ function Contact() {
       })
 
       if (!response.ok) {
-        throw new Error('Form submission failed')
+        const errorText = await response.text()
+        console.error('Formspree error:', response.status, errorText)
+        throw new Error(errorText)
       }
 
       event.currentTarget.reset()
       setStatus('success')
-    } catch {
+    } catch (error) {
+      console.error('Contact form error:', error)
       setStatus('error')
     }
   }
