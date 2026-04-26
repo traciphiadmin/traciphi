@@ -32,8 +32,8 @@ function RootDocument() {
       </head>
       <body>
         <Header />
-        <Footer />
         <Outlet />
+        <Footer />
         <Scripts />
       </body>
     </html>
