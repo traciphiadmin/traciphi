@@ -23,18 +23,27 @@ jobs:
       - name: Prepare GitHub Pages artifact (debug)
         run: |
           set -euxo pipefail
+
           echo "Current directory:"
-          pwd   
+          pwd
+
           echo "Full dist structure:"
-          find dist -maxdepth 3 -type f | sort || true
+          find dist -maxdepth 4 -type f | sort
+
+          echo "Creating gh-pages folder"
+          rm -rf gh-pages
           mkdir -p gh-pages
-          echo "Copying files..."
-          cp -rv dist/client/. gh-pages/
+
+          echo "Copying static client files to gh-pages root"
+          cp -rv dist/client/client/. gh-pages/
+
           echo "Final gh-pages structure:"
-          find gh-pages -maxdepth 2 -type f | sort
-            - uses: actions/upload-pages-artifact@v3
-              with:
-                path: gh-pages
+          find gh-pages -maxdepth 3 -type f | sort
+
+      - name: Upload GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: gh-pages
 
   deploy:
     needs: build
