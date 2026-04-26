@@ -3,45 +3,37 @@
 :root {
   --black: #111111;
   --white: #ffffff;
-  --gray-900: #171717;
-  --gray-700: #404040;
-  --gray-600: #525252;
-  --gray-500: #737373;
-  --gray-300: #d4d4d4;
-  --gray-200: #e5e5e5;
-  --gray-100: #f5f5f5;
+  --muted: #666666;
+  --border: #e5e5e5;
+  --surface: #f7f7f7;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  background: #ffffff;
-  color: #111111;
-  scroll-behavior: smooth;
-}
-
-body {
+html,
+body,
+#root {
   margin: 0;
+  min-height: 100%;
   background: #ffffff;
   color: #111111;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-body,
-p,
-span,
-a,
-button,
-input,
-textarea,
-label,
-li {
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main,
+section,
+header,
+footer,
+div {
   color: inherit;
-  font-family: inherit;
 }
 
 h1,
@@ -52,11 +44,25 @@ h5,
 h6 {
   color: #111111;
   font-family: inherit;
+  font-weight: 500;
   letter-spacing: -0.04em;
   line-height: 1.05;
 }
 
+p,
+span,
+li,
+label,
+input,
+textarea,
+select,
+button,
 a {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
   text-decoration: none;
 }
 
@@ -64,24 +70,114 @@ button {
   font-family: inherit;
 }
 
-::selection {
+input,
+textarea,
+select {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #111111;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+}
+
+.btn-primary:hover {
+  background: #333333;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #111111;
+}
+
+.btn-secondary:hover {
   background: #111111;
   color: #ffffff;
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
+.card-dark {
   background: #ffffff;
+  color: #111111;
+  border: 1px solid #e5e5e5;
+  border-radius: 24px;
+  box-shadow: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #d4d4d4;
-  border-radius: 999px;
+.tag,
+.section-label {
+  display: inline-flex;
+  color: #666666;
+  background: transparent;
+  border: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #a3a3a3;
+.gradient-text,
+.gradient-text-warm {
+  background: none;
+  -webkit-text-fill-color: #111111;
+  color: #111111;
+}
+
+.grid-bg,
+.noise,
+.glow-blue,
+.glow-cyan {
+  background-image: none;
+  box-shadow: none;
+}
+
+.input-dark {
+  width: 100%;
+  background: #ffffff;
+  color: #111111;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.input-dark::placeholder {
+  color: #999999;
+}
+
+.divider {
+  height: 1px;
+  background: #e5e5e5;
+}
+
+.stat-number {
+  color: #111111;
+  font-family: inherit;
 }
