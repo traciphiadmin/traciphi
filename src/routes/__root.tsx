@@ -5,7 +5,6 @@ import {
   createRootRoute,
 } from '@tanstack/react-router'
 import { Header } from '@/components/Header'
-import { Footer } from '@/components/Footer'
 import '../styles.css'
 
 export const Route = createRootRoute({
@@ -24,7 +23,7 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument() {
   return (
     <html lang="en">
       <head>
@@ -33,7 +32,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         <Outlet />
-        <Footer />
         <Scripts />
       </body>
     </html>
