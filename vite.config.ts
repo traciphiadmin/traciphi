@@ -15,7 +15,10 @@ const config = defineConfig({
     tanstackStart(),
     viteReact(),
   ],
-  base: '/traciphi/'
+  base: '/traciphi/',
+  build: {
+    outDir: 'dist/client'
+  }
 })
 
 export default config
