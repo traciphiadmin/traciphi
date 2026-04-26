@@ -32,6 +32,7 @@ function RootDocument() {
       </head>
       <body>
         <Header />
+        <Footer />
         <Outlet />
         <Scripts />
       </body>
