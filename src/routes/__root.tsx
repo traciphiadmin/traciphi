@@ -1,24 +1,23 @@
-import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
+import {
+  HeadContent,
+  Outlet,
+  Scripts,
+  createRootRoute,
+} from '@tanstack/react-router'
 import { Header } from '@/components/Header'
+import { Footer } from '@/components/Footer'
 import '../styles.css'
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Traciphi — Data Infrastructure Modernization',
-      },
+      { charSet: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { title: 'Traciphi — Data Infrastructure Modernization' },
       {
         name: 'description',
         content:
-          'Traciphi modernizes legacy data infrastructure to cloud-based data lakes. Domain-based Data Mesh architecture enabling AI, BI, and ML tools downstream.',
+          'Traciphi modernizes legacy data infrastructure to cloud-based data lakes and AI-ready data platforms.',
       },
     ],
   }),
@@ -31,15 +30,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body
-        style={{
-          background: '#080e1a',
-          minHeight: '100vh',
-          margin: 0,
-        }}
-      >
+      <body>
         <Header />
-        <main>{children}</main>
+        <Outlet />
+        <Footer />
         <Scripts />
       </body>
     </html>
