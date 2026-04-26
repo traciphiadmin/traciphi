@@ -20,14 +20,21 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm run build
-      - name: Prepare GitHub Pages artifact
+      - name: Prepare GitHub Pages artifact (debug)
         run: |
+          set -euxo pipefail
+          echo "Current directory:"
+          pwd   
+          echo "Full dist structure:"
+          find dist -maxdepth 3 -type f | sort || true
           mkdir -p gh-pages
-          cp -r dist/client/* gh-pages/
-          ls -la gh-pages
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: gh-pages
+          echo "Copying files..."
+          cp -rv dist/client/. gh-pages/
+          echo "Final gh-pages structure:"
+          find gh-pages -maxdepth 2 -type f | sort
+            - uses: actions/upload-pages-artifact@v3
+              with:
+                path: gh-pages
 
   deploy:
     needs: build
