@@ -24,13 +24,9 @@
 
 body {
   margin: 0;
-  background-color: var(--navy-900);
-  color: var(--slate-300);
-  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-  line-height: 1.6;
+  background: #ffffff;
+  color: #111111;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
