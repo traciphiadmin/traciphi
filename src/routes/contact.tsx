@@ -11,10 +11,11 @@ function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault()
-    setStatus('submitting')
+  event.preventDefault()
+  setStatus('submitting')
 
-    const formData = new FormData(event.currentTarget)
+  const form = event.currentTarget
+  const formData = new FormData(form)
 
     try {
       const response = await fetch(FORMSPREE_ENDPOINT, {
@@ -31,7 +32,7 @@ function Contact() {
         throw new Error(errorText)
       }
 
-      event.currentTarget.reset()
+      form.reset()
       setStatus('success')
     } catch (error) {
       console.error('Contact form error:', error)
