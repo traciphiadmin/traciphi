@@ -15,8 +15,15 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-neutral-200">
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="text-lg font-medium tracking-[-0.03em] text-black">
-          Traciphi
+        <Link to="/" className="flex items-center gap-3">
+          <img
+            src="/logo.png"
+            alt="Traciphi"
+            className="h-6 w-auto"
+          />
+          <span className="text-lg font-medium tracking-[-0.03em] text-black">
+            Traciphi
+          </span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700">
