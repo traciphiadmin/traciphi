@@ -17,13 +17,13 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/logo.png"
+            src="/logo_with_text.png"
             alt="Traciphi"
             className="h-6 w-auto"
           />
-          <span className="text-lg font-medium tracking-[-0.03em] text-black">
+          {/* <span className="text-lg font-medium tracking-[-0.03em] text-black">
             Traciphi
-          </span>
+          </span> */}
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700">
