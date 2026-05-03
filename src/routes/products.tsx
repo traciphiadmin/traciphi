@@ -27,7 +27,7 @@ function Products() {
             Products
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95] max-w-4xl text-black">
+          <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95]">
             Purpose-built products for trusted AI and data work.
           </h1>
         </div>
