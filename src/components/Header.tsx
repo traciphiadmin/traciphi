@@ -19,7 +19,7 @@ export function Header() {
           <img
             src="/logo_with_text.png"
             alt="Traciphi"
-            className="h-10 w-auto"
+            className="h-16 w-auto"
           />
           {/* <span className="text-lg font-medium tracking-[-0.03em] text-black">
             Traciphi
