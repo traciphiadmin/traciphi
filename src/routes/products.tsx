@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from '@tanstack/react-router'
+import { createFileRoute, Link, Outlet, useMatches } from '@tanstack/react-router'
 import { products } from '@/data/products'
 
 export const Route = createFileRoute('/products')({
@@ -6,6 +6,19 @@ export const Route = createFileRoute('/products')({
 })
 
 function Products() {
+  const matches = useMatches()
+  const isProductsChildRoute = matches.some(
+    (match) => typeof match.routeId === 'string' && match.routeId.startsWith('/products/')
+  )
+
+  if (isProductsChildRoute) {
+    return (
+      <main className="bg-white text-black pt-16">
+        <Outlet />
+      </main>
+    )
+  }
+
   return (
     <main className="bg-white text-black pt-16">
       <section className="px-6 py-24 border-b border-neutral-200">
@@ -25,7 +38,7 @@ function Products() {
           {products.map((product) => (
             <Link
               key={product.slug}
-              to="/products/proofstack"
+              to={product.href}
               className="rounded-3xl border border-neutral-200 bg-white p-8 hover:border-black transition"
             >
               <div className="flex items-center justify-between gap-4">
@@ -53,6 +66,8 @@ function Products() {
           ))}
         </div>
       </section>
+
+      <Outlet />
     </main>
   )
 }
