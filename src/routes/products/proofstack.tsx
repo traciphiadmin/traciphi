@@ -14,7 +14,7 @@ function ProofStack() {
               ProofStack
             </p>
 
-            <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95]">
+            <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95] text-black">
               Verify every claim before it reaches the boardroom.
             </h1>
 
@@ -41,7 +41,9 @@ function ProofStack() {
 
           <div className="rounded-[2rem] border border-neutral-200 bg-white p-8">
             <p className="text-sm text-neutral-500">Document trust score</p>
-            <p className="text-6xl font-medium tracking-tight mt-3">98.4%</p>
+            <p className="text-6xl font-medium tracking-tight mt-3 text-black">
+              98.4%
+            </p>
 
             <div className="mt-8 divide-y divide-neutral-200">
               {[
@@ -70,9 +72,10 @@ function ProofStack() {
               key={feature.title}
               className="rounded-3xl border border-neutral-200 bg-white p-8"
             >
-              <h2 className="text-2xl font-medium tracking-tight">
+              <h2 className="text-2xl font-medium tracking-tight text-black">
                 {feature.title}
               </h2>
+
               <p className="mt-4 text-neutral-600 leading-relaxed">
                 {feature.description}
               </p>
@@ -82,7 +85,7 @@ function ProofStack() {
       </section>
 
       <section className="px-6 py-24 border-t border-neutral-200 text-center">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-[-0.04em] max-w-4xl mx-auto leading-tight">
+        <h2 className="text-4xl md:text-6xl font-medium tracking-[-0.04em] max-w-4xl mx-auto leading-tight text-black">
           Reduce delivery risk before your clients find it.
         </h2>
 

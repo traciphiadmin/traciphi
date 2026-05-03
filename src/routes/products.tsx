@@ -14,7 +14,7 @@ function Products() {
             Products
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95] max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-medium tracking-[-0.05em] leading-[0.95] max-w-4xl text-black">
             Purpose-built products for trusted AI and data work.
           </h1>
         </div>
@@ -25,11 +25,11 @@ function Products() {
           {products.map((product) => (
             <Link
               key={product.slug}
-              to={product.href}
+              to="/products/proofstack"
               className="rounded-3xl border border-neutral-200 bg-white p-8 hover:border-black transition"
             >
               <div className="flex items-center justify-between gap-4">
-                <h2 className="text-3xl font-medium tracking-tight">
+                <h2 className="text-3xl font-medium tracking-tight text-black">
                   {product.name}
                 </h2>
 
@@ -46,7 +46,7 @@ function Products() {
                 {product.description}
               </p>
 
-              <span className="inline-flex mt-8 text-sm font-medium">
+              <span className="inline-flex mt-8 text-sm font-medium text-black">
                 Learn more →
               </span>
             </Link>
