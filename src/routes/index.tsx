@@ -36,10 +36,10 @@ function Home() {
           </Link>
 
           <Link
-            to="/products/proofstack"
-            className="inline-flex mt-8 rounded-full bg-black text-white px-8 py-3 text-sm font-medium hover:bg-neutral-800 transition"
+            to="/products"
+            className="rounded-full border border-black text-black px-8 py-3 text-sm font-medium hover:bg-black hover:text-white transition"
           >
-            Explore ProofStack
+            View products
           </Link>
         </div>
       </section>
