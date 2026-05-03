@@ -9,7 +9,7 @@ function FAQ() {
     <main className="bg-white text-black pt-16">
       <section className="px-6 py-24 border-b border-neutral-200">
         <div className="max-w-5xl mx-auto text-center">
-          <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-5">
+          <p className="uppercase tracking-[0.25em] text-lg text-neutral-500 mb-5">
             FAQ
           </p>
 
@@ -57,5 +57,25 @@ const FAQS = [
     question: 'Is this suitable for AI initiatives?',
     answer:
       'Yes. A major goal is to create clean, governed, trusted data foundations that can support analytics, ML, BI, and agentic AI systems.',
+  },
+  {
+    question: 'What is ProofStack?',
+    answer:
+      'ProofStack is our AI-powered document verification platform designed specifically for consulting firms. It helps verify claims, data, and insights in proposals, reports, and deliverables before they reach clients, ensuring accuracy and credibility.',
+  },
+  {
+    question: 'How does ProofStack help consulting firms?',
+    answer:
+      'ProofStack helps consulting firms by providing AI-driven verification of facts, data sources, and claims in their deliverables. This reduces the risk of errors, enhances credibility with clients, and streamlines the review process for consultants and partners.',
+  },
+  {
+    question: 'Does ProofStack store or save client confidential information?',
+    answer:
+      'No. ProofStack is designed with privacy and security in mind. It processes documents locally or through secure, temporary sessions without storing any confidential client information. All verification happens in real-time without data persistence.',
+  },
+  {
+    question: 'Is ProofStack available now?',
+    answer:
+      'ProofStack is currently in development. You can join our waitlist on the contact page to be notified when it becomes available for early access.',
   },
 ]

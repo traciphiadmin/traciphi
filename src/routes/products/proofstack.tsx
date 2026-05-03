@@ -10,7 +10,7 @@ function ProofStack() {
       <section className="min-h-screen flex items-center px-6 py-24">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
-            <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-5">
+            <p className="uppercase tracking-[0.25em] text-lg text-neutral-500 mb-5">
               ProofStack
             </p>
 

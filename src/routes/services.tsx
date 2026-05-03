@@ -9,7 +9,7 @@ function Services() {
     <main className="bg-white text-black pt-16">
       <section className="px-6 py-24 border-b border-neutral-200">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-5">
+          <p className="uppercase tracking-[0.25em] text-lg text-neutral-500 mb-5">
             Services
           </p>
 

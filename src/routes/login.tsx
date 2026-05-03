@@ -10,7 +10,7 @@ function Login() {
       <section className="min-h-screen flex items-center justify-center px-6 py-24">
         <div className="w-full max-w-md">
           <div className="text-center mb-10">
-            <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-5">
+            <p className="uppercase tracking-[0.25em] text-lg text-neutral-500 mb-5">
               Client portal
             </p>
 

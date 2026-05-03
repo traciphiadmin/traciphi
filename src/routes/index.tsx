@@ -8,7 +8,7 @@ function Home() {
   return (
     <main className="bg-white text-black pt-16">
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
-        <p className="uppercase tracking-[0.25em] text-xs text-neutral-500 mb-5">
+        <p className="uppercase tracking-[0.25em] text-lg text-neutral-500 mb-5">
           Traciphi
         </p>
 
