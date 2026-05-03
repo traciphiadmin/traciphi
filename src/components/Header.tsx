@@ -17,9 +17,9 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <img
-            src="/logo_with_text.png"
+            src="/logo_with_text_thinner.png"
             alt="Traciphi"
-            className="h-18 w-auto"
+            className="h-24 w-auto"
           />
           {/* <span className="text-lg font-medium tracking-[-0.03em] text-black">
             Traciphi
