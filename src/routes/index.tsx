@@ -34,6 +34,13 @@ function Home() {
           >
             View services
           </Link>
+
+          <Link
+            to="/products/proofstack"
+            className="inline-flex mt-8 rounded-full bg-black text-white px-8 py-3 text-sm font-medium hover:bg-neutral-800 transition"
+          >
+            Explore ProofStack
+          </Link>
         </div>
       </section>
 
